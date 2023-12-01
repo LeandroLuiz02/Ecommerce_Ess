@@ -17,8 +17,8 @@ Examples:
 
 Scenario: O professor visualiza a tela de notas em caso em que há discrepâncias
 Given Eu estou logado como "João Paulo" com uma conta do tipo "Professor"
-And estou na tela de "Notas"
-And visualizo lista contendo "<aluno>", "<autoavaliação>" e "<nota>" com uma discrepância
+And estou na tela "Notas"
+And visualiso lista contendo "<aluno>", "<autoavaliação>" e "<nota>" com uma discrepância
 When peço para o sistema mostrar os atributos da turma
 And visualizo os dados "1" e "33%" para as regiões "quantidade de discrepâncias" e "percentual de discrepância"
 
@@ -27,3 +27,10 @@ Examples:
   | Paulo Roberto    | NA, NAPA, NPA | NPA, NPA, NPA |
   | Ana Clara        | NPA, NA, NPA  | NPA, NA, NA   |
   | Maria Helena     | NPA, NA, NA   | NA, NA, NA    |
+
+Scenario: O professor tenta acessar tela de notas de turma apagada
+Given Eu estou logado como "João Paulo" com uma conta do tipo "Professor"
+And eu estou na tela "principal"
+And Vizualiso o botão de notas de uma turma já finalizada
+When clico no botão de notas
+Then sou informado pelo sistema que aquelas notas estão imutáveis
