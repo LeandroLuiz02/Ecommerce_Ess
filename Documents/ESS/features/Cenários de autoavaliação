@@ -31,3 +31,4 @@ Given Eu estou logado como "Gabriel Vasconcelos" com uma conta do tipo "Aluno"
 When Eu adiciono um preenchimento inválido
 And Confirmo a ação
 Then Recebo do sistema a mensagem de confirmação "meta 'conceitos de gerência de configuração' vazia! Autoavaliação não registrada!"
+
