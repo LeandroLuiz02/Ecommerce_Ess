@@ -8,7 +8,7 @@ Given Eu estou na tela de "Autoavaliação"
 When Eu preencho "NA", "NPA" e "NAPA" nas metas
 And Eu pressiono "Enviar"
 Then Uma tela de "Confirmação" me informa "conceitos 'NA', 'NPA' e 'NAPA' registrados com sucesso!"
-And SOu levado à tela de "Início"
+And Sou levado à tela de "Início"
 
 #cenário de serviço
 Scenario: preenchendo conceitos de autoavaliação com sucesso
