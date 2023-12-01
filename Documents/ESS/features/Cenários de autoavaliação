@@ -10,6 +10,7 @@ And Eu pressiono "Enviar"
 Then Uma tela de "Confirmação" me informa "conceitos 'NA', 'NPA' e 'NAPA' registrados com sucesso!"
 And Sou levado à tela de "Início"
 
+
 #cenário de serviço
 Scenario: preenchendo conceitos de autoavaliação com sucesso
 Given Eu estou logado como "Gabriel Vasconcelos" com uma conta do tipo "Aluno"
@@ -31,3 +32,9 @@ Given Eu estou logado como "Gabriel Vasconcelos" com uma conta do tipo "Aluno"
 When Eu adiciono um preenchimento inválido
 And Confirmo a ação
 Then Recebo do sistema a mensagem de confirmação "meta 'conceitos de gerência de configuração' vazia! Autoavaliação não registrada!"
+
+Scenario: preenchendo conceitos de autoavaliação com atrazo
+Given Eu estou logado como "Gabriel Vasconcelos" com uma conta do tipo "Aluno"
+When Eu preencho "NA", "NPA" e "NAPA"
+And Confirmo a ação
+Then Recebo do sistema a mensagem de erro "conceitos não registrados. período de autoavaliação acabou."

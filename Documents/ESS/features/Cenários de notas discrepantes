@@ -29,3 +29,10 @@ Examples:
   | Ana Clara        | NPA, NA, NPA  | NPA, NA, NA   |
   | Maria Helena     | NPA, NA, NA   | NA, NA, NA    |
   | Maria Laura      | NPA, NA, NPA  | NPA, NA, NA   |
+
+Scenario: O professor tenta acessar tela de notas de turma apagada
+Given Eu estou logado como "João Paulo" com uma conta do tipo "Professor"
+And eu estou na tela "principal"
+And Vizualiso o botão de notas de uma turma já finalizada
+When clico no botão de notas
+Then sou informado pelo sistema que aquelas notas estão imutáveis
