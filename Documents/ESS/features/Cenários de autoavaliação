@@ -33,6 +33,7 @@ When Eu adiciono um preenchimento inválido
 And Confirmo a ação
 Then Recebo do sistema a mensagem de confirmação "meta 'conceitos de gerência de configuração' vazia! Autoavaliação não registrada!"
 
+#cenário de serviço
 Scenario: preenchendo conceitos de autoavaliação com atrazo
 Given Eu estou logado como "Gabriel Vasconcelos" com uma conta do tipo "Aluno"
 When Eu preencho "NA", "NPA" e "NAPA"
