@@ -39,3 +39,11 @@ Given Eu estou logado como "Gabriel Vasconcelos" com uma conta do tipo "Aluno"
 When Eu preencho "NA", "NPA" e "NAPA"
 And Confirmo a ação
 Then Recebo do sistema a mensagem de erro "conceitos não registrados. período de autoavaliação acabou."
+
+#cenário de GUI
+Scenario: preenchendo conceitos de autoavaliação com atrazo
+Given Eu estou logado na tela "Autoavaliacao" como "Aluno"
+When Eu preencho "NA", "NPA" e "NAPA"
+And Confirmo a ação
+Then Recebo uma tela com a mensagem de erro "conceitos não registrados. período de autoavaliação acabou."
+And Continuo na tela de "Autoavaliacao"
