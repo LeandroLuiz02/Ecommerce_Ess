@@ -1,79 +1,43 @@
 
-// PLAYERS
-POST http://localhost:5001/api/players/create
+POST http://localhost:5001/api/users/cadastro
 Content-Type: application/json
 
 {
-    "id": "123",
-    "name": "neymar",
-    "age": "31",
-    "contry": "brazil",
-    "team": "al hilal"
+    "nome": "Airton Garcia",
+    "cpf": "13222020342",
+    "dataNascimento": "30/11/1978",
+    "email": "airton@example.com",
+    "login": "airtongarcia2",
+    "senha": "senhaairton567"
 }
 
 ###
-POST http://localhost:5001/api/players/create
+
+POST http://localhost:5001/api/emails/enviarEmail
 Content-Type: application/json
 
 {
-    "id": "124",
-    "name": "messi",
-    "age": "36",
-    "contry": "argentina",
-    "team": "inter miami"
+    "remetente": "Júnior",
+    "destinatario": "Rafael",
+    "assunto": "É os guri!",
+    "corpoEmail": "Bah tchê, é os guri!",
+    "comprovante": "aloha",
+    "isSpam": "false",
+    "isDelivered": "false"
 }
 
-// PRODUCTS
 ###
-POST http://localhost:5001/api/products/create
+POST http://localhost:5001/api/login
 Content-Type: application/json
 
 {
-  "nome": "Batman",
-  "id": "123456",
-  "quantidade": 10,
-  "preco": 29.99,
-  "local": "Recife"
+    "login": "olak",
+    "senha": "senha123"
 }
 
-
-###
-POST http://localhost:5001/api/products/create
+### 
+POST http://localhost:5001/api/login/logout/2
 Content-Type: application/json
 
 {
-  "nome": "Afagadores de bolas",
-  "id": "123457",
-  "quantidade": 20,
-  "preco": 9.99,
-  "local": "São Paulo"
 }
-
-###
-GET http://localhost:5001/api/products/123456
-
-###
-POST http://localhost:5001/api/cart/create
-Content-Type: application/json
-
-{
-  "id":"123",
-  "id_produtos":[],
-  "quantidade":0,
-  "data_criacao":"2024-03-03T20:38:17.880Z",
-  "data_atualizacao":"2024-03-03T20:38:17.880Z"
-}
-
-###
-GET http://localhost:5001/api/cart/123
-###
-
-POST http://localhost:5001/api/cart/addProduct
-Content-Type: application/json
-
-{
-  "id_carrinho":"123",
-  "id_product":"999"
-}
-
-###
